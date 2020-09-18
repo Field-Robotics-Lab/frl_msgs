@@ -29,4 +29,11 @@ float32 altitude
 # Estimated thruster power consumption in Watts
 float32 motor_power
 
+# Estiamted rudder angle in degrees, NED
+float32 rudder_angle
 
+# Estiamted battery pack position in m.
+float32 battery_position
+
+# Estiamted ballast tank pump position in m.
+float32 ballast_position
