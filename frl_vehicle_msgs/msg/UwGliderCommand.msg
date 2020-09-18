@@ -41,7 +41,7 @@ uint8 RUDDER_ANGLE_PORT=1
 uint8 RUDDER_ANGLE_STBD=2
 uint8 RUDDER_ANGLE_DIRECT=3
 
-# Command: target rudder angle in radians, clock-wise with axis outward from the vehicle positive.
+# Command: target rudder angle in radians, NED
 # Only pertinent if rudder_angle==RUDDER_ANGLE_DIRECT
 float32 target_rudder_angle
 
