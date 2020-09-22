@@ -35,5 +35,5 @@ float32 rudder_angle
 # Estiamted battery pack position in m.
 float32 battery_position
 
-# Estiamted ballast tank pump position in m.
-float32 ballast_position
+# Estimated bouyancy engine pumped volume in L. Positive goes up.
+float32 pumped_volume
