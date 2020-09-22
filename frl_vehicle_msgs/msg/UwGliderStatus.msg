@@ -15,7 +15,6 @@ float64 longitude
 # Estimated Euler angles, Z-X-Y, intrisic rotations conventions in degrees.
 float32 roll
 float32 pitch
-float32 yaw
 
 # Estimated magnetic heading, degrees, NED
 float32 heading
