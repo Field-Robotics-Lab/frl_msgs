@@ -23,7 +23,7 @@ float32 heading
 # Estimated depth in m.  Positive is down.
 float32 depth
 
-# Estiamted altitude in m.  Positive is up
+# Estimated altitude in m. Positive is up, -1 represents out of range.
 float32 altitude
 
 # Estimated thruster power consumption in Watts
