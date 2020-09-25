@@ -51,7 +51,7 @@ uint8 RUDDER_ANGLE_DIRECT=3
 # Only pertinent if rudder_angle==RUDDER_ANGLE_DIRECT
 float32 target_rudder_angle
 
-# Command: buoyancy engine pumped volume in L. Positive goes up.
+# Command: buoyancy engine pumped volume in cm^3. Zero is neutrally buoyant, positive causes the glider to ascend.
 float32 target_pumped_volume
 
 # command : target lat/lon
