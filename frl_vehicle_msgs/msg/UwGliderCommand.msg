@@ -7,11 +7,17 @@
 # header.stamp specifies the ROS time for this measurement 
 Header header
 
-# Command: target pitch angle in radians. Positive pitch is nose down, following REP-103.
-float32 target_pitch
+# Pitch control mode. Constants used as enum.
+uint8 pitch_cmd_type
+uint8 PITCH_CMD_BATT_POS=0
+uint8 PITCH_CMD_TARGET_ONCE=1
+uint8 PITCH_CMD_TARGET_SERVO=2
 
-# Command: target rate of descent/ascent in m/s.  Positive is up.
-float32 target_z_rate
+# Command: the desired pitch value
+# If pitch_cmd_type==PITCH_CMD_BATT_POS, specifies the position of the battery pack in m.
+# If pitch_cmd_type==PITCH_CMD_TARGET_ONCE, specifies the desired pitch angle in radians. Positive pitch is nose down. A table lookup is used to compute the desired battery position and no corrections are made.
+# If pitch_cmd_type==PITCH_CMD_TARGET_SERVO, specifies the desired pitch angle in radians. Positive pitch is nose down. The battery position is constantly servoed to maintain the target pitch.
+float32 target_pitch_value
 
 # Constants as an enum for modes of thrust input
 uint8 motor_cmd_type
@@ -45,11 +51,8 @@ uint8 RUDDER_ANGLE_DIRECT=3
 # Only pertinent if rudder_angle==RUDDER_ANGLE_DIRECT
 float32 target_rudder_angle
 
-# Command: battery pack position
-float32 target_battery_position
-
-# Command: buoyancy engine ballast pump position
-float32 target_ballast_position
+# Command: buoyancy engine pumped volume in cm^3. Zero is neutrally buoyant, positive causes the glider to ascend.
+float32 target_pumped_volume
 
 # command : target lat/lon
 # float32 target_lat
