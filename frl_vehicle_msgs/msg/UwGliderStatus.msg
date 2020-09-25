@@ -35,5 +35,5 @@ float32 rudder_angle
 # Estiamted battery pack position in m.
 float32 battery_position
 
-# Estiamted ballast tank pump position in m.
-float32 ballast_position
+# Estimated bouyancy engine pumped volume in cm^3. Zero is neutrally buoyant, positive causes the glider to ascend.
+float32 pumped_volume
