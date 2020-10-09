@@ -9,9 +9,9 @@ Header header
 
 # Pitch control mode. Constants used as enum.
 uint8 pitch_cmd_type
-uint8 PITCH_CMD_BATT_POS=0
-uint8 PITCH_CMD_TARGET_ONCE=1
-uint8 PITCH_CMD_TARGET_SERVO=2
+uint8 PITCH_CMD_BATT_POS=1
+uint8 PITCH_CMD_TARGET_ONCE=2
+uint8 PITCH_CMD_TARGET_SERVO=3
 
 # Command: the desired pitch value
 # If pitch_cmd_type==PITCH_CMD_BATT_POS, specifies the position of the battery pack in m.
@@ -21,8 +21,8 @@ float32 target_pitch_value
 
 # Constants as an enum for modes of thrust input
 uint8 motor_cmd_type
-uint8 MOTOR_CMD_VOLTAGE=0
-uint8 MOTOR_CMD_POWER=1
+uint8 MOTOR_CMD_VOLTAGE=1
+uint8 MOTOR_CMD_POWER=2
 
 # Command: motor/thruster
 # If motor_cmd_type==MOTOR_CMD_VOLTAGE, expect range [0-100]
@@ -31,8 +31,8 @@ uint32 target_motor_cmd
 
 # Yaw control mode.  Constants used as enum.
 uint8 rudder_control_mode
-uint8 RUDDER_CONTROL_HEADING=0
-uint8 RUDDER_CONTROL_ANGLE=1
+uint8 RUDDER_CONTROL_HEADING=1
+uint8 RUDDER_CONTROL_ANGLE=2
 
 # Command: target heading in degrees NED
 # Only pertinent if rudder_control_mode==RUDDER_CONTROL_HEADING
@@ -42,10 +42,10 @@ float32 target_heading
 # Command: target rudder angle either centered, full port or full stbd
 # Only pertinent if rudder_control_mode==RUDDER_CONTROL_ANGLE
 uint8 rudder_angle
-uint8 RUDDER_ANGLE_CENTER=0
-uint8 RUDDER_ANGLE_PORT=1
-uint8 RUDDER_ANGLE_STBD=2
-uint8 RUDDER_ANGLE_DIRECT=3
+uint8 RUDDER_ANGLE_CENTER=1
+uint8 RUDDER_ANGLE_PORT=2
+uint8 RUDDER_ANGLE_STBD=3
+uint8 RUDDER_ANGLE_DIRECT=4
 
 # Command: target rudder angle in radians. Positive turns to starboard.
 # Only pertinent if rudder_angle==RUDDER_ANGLE_DIRECT
