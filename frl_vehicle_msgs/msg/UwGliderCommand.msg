@@ -9,11 +9,13 @@ Header header
 
 # Pitch control mode. Constants used as enum.
 uint8 pitch_cmd_type
+uint8 PITCH_CMD_NONE=0
 uint8 PITCH_CMD_BATT_POS=1
 uint8 PITCH_CMD_TARGET_ONCE=2
 uint8 PITCH_CMD_TARGET_SERVO=3
 
 # Command: the desired pitch value
+# If pitch_cmd_type==PITCH_CMD_NONE, leave pitch as it is
 # If pitch_cmd_type==PITCH_CMD_BATT_POS, specifies the position of the battery pack in m.
 # If pitch_cmd_type==PITCH_CMD_TARGET_ONCE, specifies the desired pitch angle in radians. Positive pitch is nose down. A table lookup is used to compute the desired battery position and no corrections are made.
 # If pitch_cmd_type==PITCH_CMD_TARGET_SERVO, specifies the desired pitch angle in radians. Positive pitch is nose down. The battery position is constantly servoed to maintain the target pitch.
@@ -21,16 +23,19 @@ float32 target_pitch_value
 
 # Constants as an enum for modes of thrust input
 uint8 motor_cmd_type
+uint8 MOTOR_CMD_NONE=0
 uint8 MOTOR_CMD_VOLTAGE=1
 uint8 MOTOR_CMD_POWER=2
 
 # Command: motor/thruster
+# If motor_cmd_type==MOTOR_CMD_NONE, leave motor/thrust as it is
 # If motor_cmd_type==MOTOR_CMD_VOLTAGE, expect range [0-100]
 # If motor_cmd_type==MOTOR_CMD_POWER, expect range [1-9]
 uint32 target_motor_cmd
 
 # Yaw control mode.  Constants used as enum.
 uint8 rudder_control_mode
+uint8 RUDDER_CONTROL_NONE=0
 uint8 RUDDER_CONTROL_HEADING=1
 uint8 RUDDER_CONTROL_ANGLE=2
 
