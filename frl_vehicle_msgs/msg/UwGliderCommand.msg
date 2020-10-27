@@ -31,7 +31,7 @@ uint8 MOTOR_CMD_POWER=2
 # If motor_cmd_type==MOTOR_CMD_NONE, leave motor/thrust as it is
 # If motor_cmd_type==MOTOR_CMD_VOLTAGE, expect range [0-100]
 # If motor_cmd_type==MOTOR_CMD_POWER, expect range [1-9]
-uint32 target_motor_cmd
+float32 target_motor_cmd
 
 # Yaw control mode.  Constants used as enum.
 uint8 rudder_control_mode
