@@ -3,8 +3,11 @@
 # Unless explictly noted, units and coordinate conventions
 # follow [REP 103: Standared Units of Measure and Coordinate Conventions](https://www.ros.org/reps/rep-0103.html)
 
-# header.stamp specifies the ROS time for this measurement 
+# header.stamp specifies the ROS time for this measurement
 Header header
+
+# Status from the GPS. Expected to produce no valid fix while underwater.
+sensor_msgs/NavSatFix nav_sat_fix
 
 # Estimated latitude [degrees]. Positive is north of equator; negative is south.
 float64 latitude
