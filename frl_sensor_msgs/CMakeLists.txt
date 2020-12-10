@@ -6,7 +6,6 @@ find_package(catkin REQUIRED COMPONENTS geometry_msgs message_generation std_msg
 add_message_files(
   DIRECTORY msg
   FILES
-  SonarImage.msg
   )
 
 generate_messages(DEPENDENCIES geometry_msgs std_msgs)
