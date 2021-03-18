@@ -9,7 +9,6 @@ Header header
 # Euler angles, Z-X-Y, intrisic rotations conventions in degrees.
 float32 roll
 float32 pitch
-float32 yaw
 
 # Magnetic heading, degrees, NED
 float32 heading
