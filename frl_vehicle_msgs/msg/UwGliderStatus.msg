@@ -13,6 +13,12 @@ float32 pitch
 # Magnetic heading, degrees, NED
 float32 heading
 
+# Latitude [degrees]. Positive is north of equator; negative is south.
+float64 latitude
+
+# Longitude [degrees]. Positive is east of prime meridian; negative is west.
+float64 longitude
+
 # Eepth in m.  Positive is down.
 float32 depth
 
